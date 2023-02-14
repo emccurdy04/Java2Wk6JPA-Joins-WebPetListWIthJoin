@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Elizabeth McCurdy">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java 2 Week 5 Assessment - WebPetList</title>
+</head>
+<body>
+<header>
+	<h1 style="background-color: hsl(230, 55%, 25%); color: aliceblue;">Welcome to MockVet Clinic -<br />
+	Pet Database Dog Entry Page!</h1>
+</header>
+<section>
+<h2 style="background-color: hsl(153, 133%, 142%); color: black;">Enter name of dog, gender, breed, owner's name, and primary vetenerian's name:</h2>
+<form action="addDogServlet" method="post">
+	<label for="dogName">Enter dog's name:</label> 
+	<input type="text" id="dogName" name="dogNameInput" size="25" required="required">
+	<br>
+	<!-- trying to decide if should use radio button or drop down list select for 
+	dog gender entry -->
+	<!-- currently using the drop down list version
+	<label>Enter dog's gender:</label><br>
+	<input type="radio" id="male" name="genderInput" value="male">
+	<label for="male">male</label><br>
+	<input type="radio" id="female" name="genderInput" value="female">
+	<label for="female">female</label><br>
+	 -->
+	<br>
+	<label for="gender">Enter dog's gender:</label>
+	<select id="gender" name="genderInput">
+		<option >-select gender-</option>
+		<option value="male">male</option>
+		<option value="female">female</option>
+	</select><br>
+	<br>
+	<label for="breed">Enter dog's breed:</label>
+	<select id="breed" name="breedInput" required="required">
+		<option >-select breed-</option>
+		<option value="Airedale Terrier">Airedale Terrier</option>
+		<option value="Akita">Akita</option>
+		<option value="Alaskan Malamute">Alaskan Malamute</option>
+		<option value="American Bulldog">American Bulldog</option>
+		<option value="Basset Hound">Basset Hound</option>
+		<option value="Beagle">Beagle</option>
+		<option value="Bichon Frise">Bichon Frise</option>
+		<option value="Bloodhound">Bloodhound</option>
+		<option value="Boxer">Boxer</option>
+		<option value="Chihuahua">Chihuahua</option>
+		<option value="Cocker Spaniel">Cocker Spaniel</option>
+		<option value="Collie">Collie</option>
+		<option value="Corgi">Corgi</option>
+		<option value="Dachshund">Dachshund</option>
+		<option value="Dalmatian">Dalmatian</option>
+		<option value="Doberman Pinscher">Doberman Pinscher</option>
+		<option value="German Shepherd">German Shepherd</option>
+		<option value="Golden Doodle">Golden Doodle</option>
+		<option value="Golden Retriever">Golden Retriever</option>
+		<option value="Great Dane">Great Dane</option>
+		<option value="Greyhound">Greyhound</option>
+		<option value="Irish Setter">Irish Setter</option>
+		<option value="Irish Wolfhound">Irish Wolfhoun</option>
+		<option value="Labrador Retriever">Labrador Retriever</option>
+		<option value="Lhasa Apso">Lhasa Apso</option>
+		<option value="Maltese">Maltese</option>
+		<option value="Mastiff">Mastiff</option>
+		<option value="Mixed-Breed">Mixed-Breed</option>
+		<option value="Newfoundland">Newfoundland</option>
+		<option value="Norfolk Terrier">Norfolk Terrier</option>
+		<option value="Pekingese">Pekingese</option>
+		<option value="Pointer">Pointer</option>
+		<option value="Pomeranian">Pomeranian</option>
+		<option value="Poodle">Poodle</option>
+		<option value="Pug">Pug</option>
+		<option value="Rottweiler">Rottweiler</option>
+		<option value="Saint Bernard">Saint Bernard</option>
+		<option value="Samoyed">Samoyed</option>
+		<option value="Shar-Pei">Shar-Pei</option>
+		<option value="Shetland Sheepdog">Shetland Sheepdog</option>
+		<option value="Shiba Inu">Shiba Inu</option>
+		<option value="Shih Tzu">Shih Tzu</option>
+		<option value="Siberian Husky">Siberian Husky</option>
+		<option value="Terrier">Terrier</option>
+		<option value="West Highland Terrier">West Highland Terrier</option>
+		<option value="Yorkshire Terrier">Yorkshire Terrier</option>
+		<option value="Terrier">Terrier</option>
+		<option value="Unknown">Unknown</option>
+	</select><br /> 
+	<!-- Added drop down men for breed input <input type="text" id="breed" name="breedInput" size="25" required="required"><br> -->
+	<br>
+	<label for="ownerName">Enter dog owner's name:</label>
+	<input type="text" id="ownerName" name="ownerNameInput" size="25" required="required"><br>
+	<br>
+	<label>Enter primary vetenerian's name:</label><br> 
+	<input type="radio" id="doghouser" name="vetNameInput" value="Dr. Doghouser">
+	<label for="doghouser">Dr. Doghouser</label><br>
+	<input type="radio" id="caterson" name="vetNameInput" value="Dr. Caterson">
+	<label for="caterson">Dr. Caterson</label><br>
+	<input type="radio" id="hamsterville" name="vetNameInput" value="Dr. Hamsterville">
+	<label for="hamsterville">Dr. Hamsterville</label><br><br>
+	
+	<input type="submit" value="Add Dog to Database"/>
+	<input type="reset">
+</form><br />
+<a href="viewAllDogsServlet">View the complete pet database dogs table</a>
+
+</section>
+</body>
+</html>
