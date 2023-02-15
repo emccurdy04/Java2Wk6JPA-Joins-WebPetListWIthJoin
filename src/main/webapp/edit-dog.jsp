@@ -15,14 +15,20 @@
 <section>
 <h2>Please edit name of dog, gender, breed, owner's name, and/or primary vetenerian's name:</h2>
 <form action="editDogServlet" method="post">
+<input type="hidden" name="id" value="${dogToEdit.id}">
 Enter/Update Dog's name: <input type="text" name="dogNameInput" value="${dogToEdit.name}"><br />
 <br>
-Current breed listed as:<input list="breed" name="breedInput" value="${dogToEdit.breed}"><br />
+Current breed listed as:  ${dogToEdit.breed} <br />
 <br>
-<!-- <input name="breedInput" value="${dogToEdit.breed}"> -->
-	<label for="breed">Enter/Update dog's breed:</label>
-	<select id="breed" name="breedInput" required="required">
-		<option >-select breed-</option>
+<!-- <input list="breed" name="breedInput" value="${dogToEdit.breed}"><br />
+<br> -->
+Enter/Update dog's breed: <!-- <input list="breed" name="breedInput">-->
+<!-- Enter/Update dog's breed: <input list="breed" name="breedInput" value="${dogToEdit.breed}">-->
+	<!-- <label for="breed">Enter/Update dog's breed:</label> -->
+	<!-- <datalist id="breed" >-->
+	<select id="breed" name="breedInput" >
+		<option value="${dogToEdit.breed}">${dogToEdit.breed}</option>
+		<!-- <option>--select breed--</option></option> -->
 		<option value="Airedale Terrier">Airedale Terrier</option>
 		<option value="Akita">Akita</option>
 		<option value="Alaskan Malamute">Alaskan Malamute</option>
@@ -71,32 +77,39 @@ Current breed listed as:<input list="breed" name="breedInput" value="${dogToEdit
 		<option value="Yorkshire Terrier">Yorkshire Terrier</option>
 		<option value="Terrier">Terrier</option>
 		<option value="Unknown">Unknown</option>
-	</select><br /> 
-	<!-- Added drop down menu for breed input <input type="text" id="breed" name="breedInput" size="25" required="required"><br> -->
-	<br>	
+	</select>
+<br />
+	<!-- </datalist> <br /> 
+ Added drop down menu for breed input <input type="text" id="breed" name="breedInput" size="25" required="required"> 
+ -->
+
+<!-- Decide between two below versions of gender input 
+Current gender listed as:  ${dogToEdit.gender} <br />
 <br>
-<!-- Decide between two below versions of gender input -->
-<!-- Enter dog's gender:<input list="gender" name="genderInput" required="required" value="${dogToEdit.gender}">
+Enter/Update dog's gender:<input list="gender" name="genderInput" required="required" value="${dogToEdit.gender}">
 <datalist id="gender">
+	<option >-select gender-</option>
 	<option value="male">
 	<option value="female">
-</datalist><br/>
+</datalist><br/> -->
+<br /> 
+Current gender listed as:  ${dogToEdit.gender} <br />
+<!--Current gender listed as:<input name="genderInput" value="${dogToEdit.gender}"><br/> -->
 <br>
- -->
-Current gender listed as:<input name="genderInput" value="${dogToEdit.gender}"><br/>
-<br>
-	<label for="gender">Enter/Update dog's gender:</label>
-	<select id="gender" name="genderInput" required="required">
-		<option >-select gender-</option>
+Enter/Update dog's gender: <!-- <input name="genderInput" value="${dogToEdit.gender}"> -->
+	<!-- <label for="gender">Enter/Update dog's gender:</label> -->
+	<select id="gender" name="genderInput">
+		<!-- <option >-select gender-</option> -->
+		<option value="${dogToEdit.gender}">${dogToEdit.gender}</option>
 		<option value="male">male</option>
 		<option value="female">female</option>
 	</select><br />
 <br>
-Enter/Update dog owner's name:<input type="text" id="ownerName" name="ownerNameInput" size="25" required="required" value="${dogToEdit.ownerName}"><br />
+Enter/Update dog owner's name: <input type="text" id="ownerName" name="ownerNameInput" size="25" required="required" value="${dogToEdit.ownerName}"><br />
 <br>
 
 <!-- Decide between two below versions of vet name input -->
-Enter/Update primary vetenerian's name:<input list="vetName" name="vetNameInput" required="required" value="${dogToEdit.primaryVet}">
+Enter/Update primary vetenerian's name: <input list="vetName" name="vetNameInput" required="required" value="${dogToEdit.primaryVet}">
 <datalist id="vetName">
 	<option value="Dr. Caterson">
 	<option value="Dr. Doghouser">
@@ -112,7 +125,7 @@ Enter/Update primary vetenerian's name:<input list="vetName" name="vetNameInput"
 	<input type="radio" id="hamsterville" name="vetNameInput" value="Dr. Hamsterville">
 	<label for="hamsterville">Dr. Hamsterville</label><br><br>
  -->	
-	<input type="hidden" name="id" value="${dogToEdit.id}">
+	
 	<input type="submit" value="Save Edited Dog Entry to Database"/>	
 </form>
 </section>
