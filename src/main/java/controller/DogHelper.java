@@ -27,7 +27,7 @@ public class DogHelper {
 	// manages the Entities/Entity object operations to & from the DB -
 	// such as finding objects, committing/saving them to the DB,
 	// removing them from the DB, etc.
-	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("WebPetList");
+	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("WebPetListWithJoin");
 	
 	
 	/**

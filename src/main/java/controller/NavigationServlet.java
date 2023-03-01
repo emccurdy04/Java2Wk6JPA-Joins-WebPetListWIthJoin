@@ -15,7 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 import model.Dog;
 
 /**
- * Servlet implementation class NavigationServlet
+ * Servlet implementation class NavigationServlet - 
+ * NavigationServlet called by dog-list.jsp. then redirects to
+ * "/viewAllDogsServlet" if selected delete dog object/entity, "/edit-dog.jsp" if selected
+ * to edit dog entity/object, or "/index.html" if selected to add new dog object/entity
  */
 @WebServlet("/navigationServlet")
 public class NavigationServlet extends HttpServlet {

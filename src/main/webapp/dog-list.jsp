@@ -10,10 +10,11 @@
 </head>
 <body>
 <header>
-	<h1 style="background-color: hsl(230, 55%, 25%); color: aliceblue;">MockVet Clinic Pet Database -<br/>Dogs Table List:</h1>
+	<h1 style="background-color: hsl(230, 55%, 25%); color: aliceblue;">MockVet Clinic Pet Database -<br/>
+	Dogs Table List:</h1>
 </header>
 <section>
-<h3>Dog's Name | Breed | Gender | Owner's Name | Vet's Name</h3>
+<h3>Dog's Name | Breed | Gender | DOB | Owner's Name | Vet's Name</h3>
 <form method="post" action="navigationServlet">
 <table>
 <c:forEach items="${requestScope.allDogs}" var="currentdog">
@@ -22,6 +23,7 @@
 	<td>${currentdog.name}</td>
 	<td>${currentdog.breed}</td>
 	<td>${currentdog.gender}</td>
+	<td>${currentdog.dogDOB}</td>
 	<td>${currentdog.ownerName}</td>
 	<td>${currentdog.primaryVet}</td>
 </tr>
@@ -37,6 +39,22 @@ Otherwise, press add button if you wish to return to the add dog entry page.</p>
 <input type="submit" value="add" name="doThisToDog">
 
 </form>
+
+<a href="viewPetListServlet">View Pet list for owner</a><br />
+<a href="viewAllDogsServlet">View all dogs in database</a><br />
+<a href="viewAllOwnersServlet">View all owners in database</a><br />
+<br />
+<!-- ???remove link below? Or change to only adding pet to existing pet owner's listOPets???-->
+<a href="addPetsForPetListServlet">Create a new PetList</a><br />
+<!-- ??? remove link below - as currently only need index.html link to add pet & pet owner 
+together since no reason to create pet owner w/o an associated pet???-->
+<a href="addOwnerServlet">Add a new owner to database</a><br />
+<!-- <a href="index.html">Add a new pet to database</a> -->
+<br>
+<!-- ???change below so addDogServlet adds dog if existing owner but does index.html direct if both 
+owner and dog are new? -->
+<a href="addDogServlet">Add a new dog to database</a><br />
+<a href="index.html">Add a new pet and a new owner to database</a>
 </section>
 </body>
 </html>

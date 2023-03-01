@@ -12,7 +12,7 @@
 	Pet Database Dog Entry Page!</h1>
 </header>
 <section>
-<h2 style="background-color: hsl(153, 133%, 142%); color: black;">Enter name of dog, gender, breed, owner's name, and primary vetenerian's name:</h2>
+<h2 style="background-color: hsl(153, 133%, 142%); color: black;">Enter name of dog, gender, breed, DOB, owner's name, and primary vetenerian's name:</h2>
 <form action="addDogServlet" method="post">
 	<label for="dogName">Enter dog's name:</label> 
 	<input type="text" id="dogName" name="dogNameInput" size="25" required="required">
@@ -87,6 +87,11 @@
 		<option value="Unknown">Unknown</option>
 	</select><br /> 
 	<!-- Added drop down men for breed input <input type="text" id="breed" name="breedInput" size="25" required="required"><br> -->
+	<br /> 
+	Enter dog's DOB: <input type="text" name="month" placeholder="mm" size="4"> 
+<input type="text" name="day" placeholder="dd" size="4">, 
+<input type="text" name="year" placeholder="yyyy" size="4"><br />	
+	
 	<br>
 	<label for="ownerName">Enter dog owner's name:</label>
 	<input type="text" id="ownerName" name="ownerNameInput" size="25" required="required"><br>
@@ -99,11 +104,24 @@
 	<input type="radio" id="hamsterville" name="vetNameInput" value="Dr. Hamsterville">
 	<label for="hamsterville">Dr. Hamsterville</label><br><br>
 	
-	<input type="submit" value="Add Dog to Database"/>
+	<input type="submit" value="Add Dog and Pet Owner to Database"/>
 	<input type="reset">
 </form><br />
-<a href="viewAllDogsServlet">View the complete pet database dogs table</a>
-
+<a href="viewAllDogsServlet">View the complete pet database dogs table</a><br />
+<a href="viewPetListServlet">View Pet list for owner</a><br />
+<a href="viewAllOwnersServlet">View the complete pet database pet owner's table</a><br />
+?Change/remove link below?<br/>
+<!-- ??Remove below link if change how PetListDetails works/can be accessed so can only view
+the PetListDetails for each owner and add new pets to PetOwner's listOfPets arrayList???-->
+<a href="addPetsForPetListServlet">?Create a new PetList ?or add new pet to existing pet owner's
+pet list</a><br />
+<br>
+<!-- ??? Link below not needed - unless later add other animal type tables??? -->
+<a href="/addOwnerServlet">Add a new pet owner to database</a><br />
+<!-- ???change below so addDogServlet adds dog if existing owner but does index.html direct if both 
+owner and dog are new? -->
+<a href="/addDogServlet">Add a new dog to database</a><br />
+<a href="index.html">Add a new pet and a new owner to database</a>
 </section>
 </body>
 </html>

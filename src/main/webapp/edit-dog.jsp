@@ -10,10 +10,12 @@
 </head>
 <body>
 <header>
-	<h1 style="background-color: hsl(230, 55%, 25%); color: aliceblue;">MockVet Clinic Pet Database <br/>Dog Entry Editing Page</h1>
+	<h1 style="background-color: hsl(230, 55%, 25%); color: aliceblue;">MockVet Clinic Pet Database:<br/>
+	Dog Entry Editing Page</h1>
 </header>
 <section>
-<h2>Please edit name of dog, gender, breed, owner's name, and/or primary vetenerian's name:</h2>
+<h2>Please edit name of dog, gender, breed, dog's DOB, owner's name, and/or primary vetenerian's name:</h2>
+
 <form action="editDogServlet" method="post">
 <input type="hidden" name="id" value="${dogToEdit.id}">
 Enter/Update Dog's name: <input type="text" name="dogNameInput" value="${dogToEdit.name}"><br />
@@ -104,6 +106,12 @@ Enter/Update dog's gender: <!-- <input name="genderInput" value="${dogToEdit.gen
 		<option value="male">male</option>
 		<option value="female">female</option>
 	</select><br />
+<br>
+Current DOB listed in database: ${dogToEdit.dogDOB}<br /> 
+Enter/Update dog's DOB: <input type="text" name="month" placeholder="mm" size="4"> 
+<input type="text" name="day" placeholder="dd" size="4">, 
+<input type="text" name="year" placeholder="yyyy" size="4"><br />	
+
 <br>
 Enter/Update dog owner's name: <input type="text" id="ownerName" name="ownerNameInput" size="25" required="required" value="${dogToEdit.ownerName}"><br />
 <br>

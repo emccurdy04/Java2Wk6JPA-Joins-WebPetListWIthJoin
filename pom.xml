@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>WebPetList</groupId>
-  <artifactId>WebPetList</artifactId>
+  <groupId>WebPetListWithJoin</groupId>
+  <artifactId>WebPetListWithJoin</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>Java 2 Week 5 Web JPA &amp; Servlets Assessment  WebPetList Project</name>
-  <description>Java 2 Week 5 Web JPA &amp; Servlets Assessment WebPetList Project</description>
+  <name>Java 2 Week 6 Web JPA with Join and Servlets Assessment  WebPetListWithJoin Project</name>
+  <description>Java 2 Week 6 Web JPA with Join and Servlets Assessment WebPetListWithJoin Project</description>
   <build>
     <plugins>
       <plugin>

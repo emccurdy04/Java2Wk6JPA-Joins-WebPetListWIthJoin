@@ -2,7 +2,9 @@ import java.util.List;
 import java.util.Scanner;
 
 import controller.DogHelper;
+import controller.PetOwnerHelper;
 import model.Dog;
+import model.PetOwner;
 
 /**
 * @author Elizabeth McCurdy - emccurdy
@@ -26,6 +28,7 @@ public class StartPetListProgram {
 
 	static Scanner in = new Scanner(System.in);
 	static DogHelper dogh = new DogHelper();
+	static PetOwnerHelper petownh = new PetOwnerHelper();
 
 	/**
 	 * The addADog() method - takes user inputs, changing to all lower case, then
@@ -461,6 +464,16 @@ public class StartPetListProgram {
 		List<Dog> allDogs = dogh.showAllDogs();
 		for (Dog singleDog : allDogs) {
 			System.out.println(singleDog.returnDogDetails());
+		}
+
+	}
+	
+	private static void viewOwnerList() {
+		// iterate through List<Dog> allDogs list & display
+		// it using an enhanced for loop
+		List<PetOwner> allOwners = petownh.showAllOwners();
+		for (PetOwner singleOwner : allOwners) {
+			System.out.println(singleOwner.returnOwnerDetails());
 		}
 
 	}
